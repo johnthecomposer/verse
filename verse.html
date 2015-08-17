@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" media="screen" href="verse.css"/>
+  <script src="verse.js"></script>
+  <script src="jcjs_build.js"></script>
+  <script src="jcjs_html.js"></script>
+  <script src="jcjs_events.js"></script>  
+  <script src="jcjs_info.js"></script>
+  <script src="jcjs_storage.js"></script>  
+  <!----- jQuery ---------> 
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+</head>
+<body>
+<div id="temp"></div>
+<div id="header">Verse</div>
+<div id="insertelement"></div>
+
+
+<script>
+
+$(document).ready(function(){
+	//deleteFromLocal('verses_vault');
+	if(!localStorage['verses_vault']){
+	alert('verses_literal not found in local storage');
+		storeLocally('verses_vault', verses_literal);
+	}
+	var verses = fetchFromLocal('verses_vault');
+
+assignMethods(verses);
+
+   var dump = JSON.stringify(verses, null, 4); 
+   $('#temp').html('<pre>' + dump + '</pre>')
+
+
+
+	/*
+	verses['tripoffools']['text'].splice(3,0,"just gazing at his shoes");
+	storeLocally('verses_vault', verses);
+	var verses = fetchFromLocal('verses_vault');
+	assignMethods(verses);
+	
+var i = 0;
+for(b in verses['tripoffools']['text']){
+	if(verses['tripoffools']['text'][b] == '<br>'){
+		verses['tripoffools']['text'].splice(verses['tripoffools']['text'][i],1); 
+	}
+	i++;
+}
+*/
+verses.printThese('Finished', 10);
+dReady(verses);
+
+
+//console.log(verses);
+/*
+addVerse(verses,
+		'The Kraken',
+		'Lyrics',
+		'2015-05-19',
+		'Test',
+		10,
+		'going for a swim',
+		['lalala', 'tatata']
+);
+*/
+
+
+	//getDyads();
+	//console.log(getParentName('verses'));
+
+	//console.log(getpaths(verses));
+
+//console.log(verses);
+
+});
+</script>
+
+</body>
+</html>

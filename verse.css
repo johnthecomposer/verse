@@ -1,0 +1,62 @@
+body{
+	font-family: Courier;
+	font-size: 90%;
+	
+}
+
+input{
+	width:	400px;
+}
+
+.object_wrapper{
+	border: 1px solid gray;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 120%;
+	margin: 0px 0px 15px 0px;
+	border-top: 2px dotted black;
+	padding-top: 7px;
+}
+
+.text_container{
+	margin: 25px 0px 20px 10px;
+	border: 1px solid green;
+	padding: 14px;
+	width: 777px;
+}
+
+.stanza_header{
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+.stanza{
+	margin-top: 7px;
+}
+
+.line{
+	font-weight: normal;
+}
+
+
+#header{
+	font-weight: bold;
+	font-size: 200%;
+	margin-left: 20px;
+}
+
+#verses{
+	margin-left: 50px;
+	border-left: 1px solid gray;
+	padding: 14px;
+}
+
+#dukey{
+	background-color: red;
+}
+
+#insertelement{
+	text-align: left;
+}
